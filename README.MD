@@ -34,6 +34,10 @@ S88 装置の指定のポートが アクティブになるのを待ちます。
 
 example_threading.py が参考になるかと思います。
 
+
+[![](https://img.youtube.com/vi/KzaExJKuuNs/0.jpg)](https://www.youtube.com/watch?v=KzaExJKuuNs)
+
+
 ---
 ### その他
 * 開発環境は、Windows 10 Pro 64bit, Python 3.8.10 です。
