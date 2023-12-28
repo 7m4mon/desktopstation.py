@@ -32,11 +32,10 @@ S88 装置の指定のポートが アクティブになるのを待ちます。
 その場合、`updateS88b` を各スレッドがアクセスすると、読み取るセンサの数に比例したシリアルポートの読み取り時間が発生します。  
 これを防ぐには、`start_polling_s88(interval = 0.1)` で S88 装置のポーリングをしておくと、`waitForS88` は共有メモリ(s88b)から S88 装置の状態を読むようになります。
 
-example_threading.py が参考になるかと思います。
-
+`example_threading.py` や `example_shuttle_threading_double_track.py` が参考になるかと思います。
 
 [![](https://img.youtube.com/vi/KzaExJKuuNs/0.jpg)](https://www.youtube.com/watch?v=KzaExJKuuNs)
-
+[![](https://img.youtube.com/vi/2GzQ8uJ73sc/0.jpg)](https://www.youtube.com/watch?v=2GzQ8uJ73sc)
 
 ---
 ### その他
