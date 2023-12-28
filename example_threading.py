@@ -24,8 +24,8 @@ class Train:    # 各列車のパラメータを定義するクラス
         self.speed = speed
         self.horn_file = horn_file
 
-tr1 = Train(10, 200, "horn1.mp3")
-tr2 = Train(70, 250, "horn2.mp3")
+tr1 = Train(10, 250, "horn1.mp3")
+tr2 = Train(70, 200, "horn2.mp3")
 
 # 終了時に呼ばれてスレッドをすべて終了する
 def kill_all_threads():
@@ -93,4 +93,4 @@ except Exception as e:
 finally:
     kill_all_threads()
     ds.stop_polling_s88()
-    ds.stop()
+    ds.close()

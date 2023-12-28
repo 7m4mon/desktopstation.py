@@ -46,8 +46,8 @@ class DesktopStation:
         
         return self.comm_ok
     
-    def stop(self):
-        print("DS STOP")
+    def close(self):
+        print("DS CLOSE")
         self.lock = False       # 強制的にロックを解除
         if self.ser.is_open :
             self.send_command("setPower(0)")

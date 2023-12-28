@@ -62,4 +62,4 @@ except Exception as e:
     print(e)
 
 finally:
-    ds.stop()
+    ds.close()
