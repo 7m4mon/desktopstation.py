@@ -9,7 +9,7 @@
 1. `ds = desktopstation.DesktopStation()` でインスタンスを作成します。S88装置が複数ある場合は引数に個数を指定します。
 1. `ds.open('COMx')` で DesktopStation を開きます。
 1. `ds.setPing()` , `ds.setPower(1)` で DesktopStation から線路に電気を供給して、S88装置から在線情報を読みつつ列車やポイントを制御します。
-1. `ds.stop()` で 電源供給を停止、COMポートを閉じて、DesktopStation との接続を解除します。
+1. `ds.close()` で 電源供給を停止、COMポートを閉じて、DesktopStation との接続を解除します。
 
 ---
 ### よく使う関数 
