@@ -3,6 +3,7 @@ Description:
 desktopstation.py の動作確認用サンプルプログラムです。
 2つの列車がそれぞれ独立した線路を、S88の1と3の間、S88の4と6の間を往復します。
 1,4 に到着したときは、もう片方の列車が到着するまで待ちます。
+TNOS における該当例はありません。
 環境は Windows10 64bit, Python 3.8.10、playsound は 1.2.2 を使用
 Author: 7M4MON
 Date: 2023/12/28 初版
