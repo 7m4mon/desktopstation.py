@@ -67,17 +67,15 @@ try :
         if state == 0: # tr1 が左、tr2 が右に行く
             thread1 = threading.Thread(target=train_move, args=(tr1,1,1,1,1,3))
             thread2 = threading.Thread(target=train_move, args=(tr2,2,2,1,4,2))
-            thread1.start()
-            thread2.start()
-            while thread1.is_alive() or thread2.is_alive(): # thread1.join() はCtrl-C を受け取らないので。
-                time.sleep(0.01)
+            
         if state == 1: # tr1 が右、tr2 が左に行く
             thread1 = threading.Thread(target=train_move, args=(tr2,1,1,1,1,3))
             thread2 = threading.Thread(target=train_move, args=(tr1,2,2,1,4,2))
-            thread1.start()
-            thread2.start()
-            while thread1.is_alive() or thread2.is_alive(): # thread1.join() はCtrl-C を受け取らないので。
-                time.sleep(0.01)
+
+        thread1.start()
+        thread2.start()
+        while thread1.is_alive() or thread2.is_alive(): # thread1.join() はCtrl-C を受け取らないので。
+            time.sleep(0.01)
 
         time.sleep(0.5) # 2列車揃ったら駅に停車
 
