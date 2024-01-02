@@ -32,11 +32,27 @@ S88 装置の指定のポートが アクティブになるのを待ちます。
 その場合、`updateS88b` を各スレッドがアクセスすると、読み取るセンサの数に比例したシリアルポートの読み取り時間が発生します。  
 これを防ぐには、`start_polling_s88(interval = 0.1)` で S88 装置のポーリングをしておくと、`waitForS88` は共有メモリ(s88b)から S88 装置の状態を読むようになります。
 
-`example_threading.py` や `example_shuttle_threading_double_track.py` が参考になるかと思います。
+`example_shuttle_threading_double_track.py` が参考になるかと思います。
 
-[![](https://img.youtube.com/vi/KzaExJKuuNs/0.jpg)](https://www.youtube.com/watch?v=KzaExJKuuNs)
 [![](https://img.youtube.com/vi/2GzQ8uJ73sc/0.jpg)](https://www.youtube.com/watch?v=2GzQ8uJ73sc)
 
+---
+### 各プログラムの動作
+
+TOMIXの[TNOS](https://www.tomytec.co.jp/tomix/necst/5701tnos/)という、自動運転プログラムとの対応表です。
+
+|ファイル名|説明|TNOSの番号|動画|
+|---|---|---|---|
+|example_single_track_interchange.py|単線行き違い|5 コンパクト(単線)|https://www.youtube.com/watch?v=KzaExJKuuNs|
+|example_y-move.py|Y字ポイント往復|該当なし|-|
+|example_shuttle.py|単線往復運転|該当なし|https://www.youtube.com/watch?v=2GzQ8uJ73sc|
+|example_shuttle_threading_double_track.py|複線独立往復運転|該当なし|-|
+
+<!---
+|yy.py|エンドレス 追い越し|1-2|-|
+|zz.py|エンドレス 入れ替え|1-3|-|
+|example_endless_two-trais.py|エンドレス|8|
+--->
 ---
 ### その他
 * 開発環境は、Windows 10 Pro 64bit, Python 3.8.10 です。
