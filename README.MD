@@ -37,24 +37,40 @@ S88 装置の指定のポートが アクティブになるのを待ちます。
 [![](https://img.youtube.com/vi/2GzQ8uJ73sc/0.jpg)](https://www.youtube.com/watch?v=2GzQ8uJ73sc)
 
 ---
-### 各プログラムの動作
+### サンプルプログラムについて
 
 TOMIXの[TNOS](https://www.tomytec.co.jp/tomix/necst/5701tnos/)という、自動運転プログラムとの対応表です。
 
 |ファイル名|説明|TNOSの番号|動画|
 |---|---|---|---|
-|example_single_track_interchange.py|単線行き違い|5 コンパクト(単線)|https://www.youtube.com/watch?v=KzaExJKuuNs|
-|example_y-move.py|Y字ポイント往復|該当なし|-|
-|example_shuttle.py|単線往復運転|該当なし|https://www.youtube.com/watch?v=2GzQ8uJ73sc|
-|example_shuttle_threading_double_track.py|複線独立往復運転|該当なし|-|
+|example_endless_alternate.py|交互発着|1-1 エンドレス 交互運転|https://youtu.be/VE1PpkzEKR0|
+|example_endless_overtake.py|退避＆追い越し|1-2 エンドレス 追い越し|https://youtu.be/EOrtSsXwhb0|
+|example_endless_exchange.py|入れ替え|1-3 エンドレス 入れ替え|https://youtu.be/pulbfx1baHg|
+|example_single_track_interchange.py|単線行き違い|5 コンパクト(単線)|https://youtu.be/KzaExJKuuNs|
+|example_y-move.py|Y字ポイント往復|該当なし|https://youtube.com/shorts/YktbvJ0o_b4|
+|example_shuttle.py|単線往復運転|該当なし|-|
+|example_shuttle_threading_double_track.py|複線独立往復運転|該当なし|https://youtu.be/2GzQ8uJ73sc|
 
 <!---
-|yy.py|エンドレス 追い越し|1-2|-|
-|zz.py|エンドレス 入れ替え|1-3|-|
 |example_endless_two-trais.py|エンドレス|8|
 --->
+
+TNOS と比較 
+- メリット
+  * Pythonのスキルがあれば、レイアウトに合わせて自由自在に好みの運転プログラムを作ることが出来る。
+  * DCCコントローラーや在線検出器などは同人ハードウェアで提供されているので安価に構築可能。オープンハードウェアなので電子工作のスキルがあれば自作すら可能。
+  * Python の多様なライブラリと組み合わせて音を鳴らしたり色々遊べる。
+  * VS CodeなどのPC上のエディタでパラメータを設定するので直感的に作業しやすい。
+- デメリット
+  * 車両のDCC化が必要
+  * Pythonの実行環境が必要
+  * 動作に関するサポートがない
+- 感想
+  * KATO には TNOS に相当するソリューションはないので、STEAM教育と絡めてキット化したら面白いのでは。
+  * お座敷レイアウトを組み上げて配線するのは一苦労。机上で出来るように、チビ電ないし路面電車のDCCユニットが欲しい。
+
 ---
 ### その他
-* 開発環境は、Windows 10 Pro 64bit, Python 3.8.10 です。
+* 開発環境は、Windows 10 Pro 64bit, Python 3.8.10 / 3.12.1 です。
 * DS Air Rev. R2n5 で検証しています。
 * horn1.mp3, horn2.mp3 は DesktopStation 様の提供です。
