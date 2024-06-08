@@ -123,8 +123,8 @@ class DesktopStation:
     # S88 のバッファ s88b を更新する。
     def updateS88b(self):
         for i in range(len(self.s88b)):                        # 複数の S88装置は未検証（持ってないので。）
-            self.s88b[i] = self.getS88(i + 1)                  # 1から始まるので。配列は0から。
-            print("S88-" + str(i + 1) + ":" + format(self.s88b[i],'#018b'))
+            self.s88b[i] = int(self.getS88(i + 1))             # 1から始まるので。配列は0から。
+            print("S88-" + str(i + 1) + ":" + format(int(self.s88b[i]),'#018b'))
         return True
 
     # count 個目の s88b のバッファから該当(num)の位置のビットを読む。
