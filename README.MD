@@ -50,10 +50,7 @@ TOMIXの[TNOS](https://www.tomytec.co.jp/tomix/necst/5701tnos/)という、自�
 |example_y-move.py|Y字ポイント往復|該当なし|https://youtube.com/shorts/YktbvJ0o_b4|
 |example_shuttle.py|単線往復運転|該当なし|-|
 |example_shuttle_threading_double_track.py|複線独立往復運転|該当なし|https://youtu.be/2GzQ8uJ73sc|
-
-<!---
-|example_endless_two-trais.py|エンドレス|8|
---->
+|example_endless_chase.py|エンドレス|8|https://youtu.be/mfUUky65Z3k|
 
 TNOS と比較 
 - メリット
